@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.2 on win32)" generated="2025-07-24T18:09:44.441306" rpa="false" schemaversion="5">
+<suite id="s1" name="Register-Test" source="C:\bookstore-demo-test\register-test.robot">
+<test id="s1-t1" name="Scenario: Sucess sign in as Juridical Person" line="29">
+<kw name="Given Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:44.817798" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-24T18:09:44.817552" elapsed="2.520531"/>
+</kw>
+<kw name="And Go To" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:47.338768" level="INFO">Opening url 'http://localhost:5173/'</msg>
+<arg>url=http://localhost:5173/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-07-24T18:09:47.338576" elapsed="0.029054"/>
+</kw>
+<kw name="And Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-24T18:09:47.368116" elapsed="1.146763"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-24T18:09:50.516065" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-24T18:09:48.515358" elapsed="2.000814"/>
+</kw>
+<kw name="And Click Link" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:50.517316" level="INFO">Clicking link 'xpath=//a[text()='Minha conta']'.</msg>
+<arg>xpath=//a[text()='Minha conta']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:50.516877" elapsed="0.135477"/>
+</kw>
+<kw name="When Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:50.653201" level="INFO">Typing text 'Lorem ipsum' into text field 'id: register-name'.</msg>
+<arg>id: register-name</arg>
+<arg>Lorem ipsum</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:50.652960" elapsed="0.166967"/>
+</kw>
+<kw name="And Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:50.820847" level="INFO">Typing text 'contato@loremipsum.com' into text field 'id: register-mail'.</msg>
+<arg>id: register-mail</arg>
+<arg>contato@loremipsum.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:50.820330" elapsed="0.104296"/>
+</kw>
+<kw name="And Input Password" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:50.925205" level="INFO">Typing password into text field 'id: register-pass'.</msg>
+<msg time="2025-07-24T18:09:50.952055" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id: register-pass</arg>
+<arg>54321</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:50.925018" elapsed="0.066139"/>
+</kw>
+<kw name="And Input Password" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:50.991839" level="INFO">Typing password into text field 'id: register-confirm-pass'.</msg>
+<msg time="2025-07-24T18:09:51.016439" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id: register-confirm-pass</arg>
+<arg>54321</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:50.991558" elapsed="0.077037"/>
+</kw>
+<kw name="And Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:51.069488" level="INFO">Selecting options from selection list 'id: register-user-type' by label Pessoa Jurídica.</msg>
+<arg>id: register-user-type</arg>
+<arg>Pessoa Jurídica</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.069213" elapsed="0.103227"/>
+</kw>
+<kw name="And Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:51.172928" level="INFO">Selecting checkbox 'id: terms-of-use'.</msg>
+<arg>id: terms-of-use</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.172758" elapsed="0.081698"/>
+</kw>
+<kw name="And Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:51.255286" level="INFO">Clicking element 'xpath=//input[@id="submit-register"]'.</msg>
+<arg>xpath=//input[@id="submit-register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.254934" elapsed="0.104935"/>
+</kw>
+<kw name="Then Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Lorem ipsum, teu cadastro foi realizado com sucesso!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.360407" elapsed="0.246141"/>
+</kw>
+<kw name="And Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:51.633750" level="INFO">Current page contains link '/my-orders'.</msg>
+<arg>/my-orders</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.607017" elapsed="0.026862"/>
+</kw>
+<kw name="And Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:51.660199" level="INFO">Current page contains link '/my-invoices'.</msg>
+<arg>/my-invoices</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.634299" elapsed="0.026328"/>
+</kw>
+<kw name="And Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2025-07-24T18:09:51.682187" level="INFO">Current page contains link '/my-invoices'.</msg>
+<arg>/my-invoices</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.661245" elapsed="0.021083"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-24T18:09:51.683257" elapsed="2.399220"/>
+</kw>
+<tag>Register Juridical Person</tag>
+<status status="PASS" start="2025-07-24T18:09:44.816110" elapsed="9.267628"/>
+</test>
+<doc>Como cliente  da loja virtual, desejo criar um cadastro
+no sistema para poder visualiozar meus pedidos e listas de desejo.</doc>
+<status status="PASS" start="2025-07-24T18:09:44.444377" elapsed="9.641638"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Register Juridical Person</stat>
+</tag>
+<suite>
+<stat name="Register-Test" id="s1" pass="1" fail="0" skip="0">Register-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
