@@ -1,7 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../page_objects/register_page_object.resource
-Resource    ../../keywords/sign_natural_person.robot
+
+Resource    ../resource/page_objects/register_page_object.resource
+Resource    ../resource/page_objects/account_page_object.resource
+Resource    ../resource/page_objects/menu_page_object.resource
 
 *** Keywords ***
 I fill register form

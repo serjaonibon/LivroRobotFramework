@@ -1,0 +1,25 @@
+CONTAINER ID   IMAGE                                  COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+40657a5f0e21   thvieiraid/bookstore-web-demo:latest   "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:5173->5173/tcp, :::5173->5173/tcp   bookstore-web-demo-from-hub
+
+# Iniciar o container
+docker start bookstore-web-demo-from-hub
+
+
+#executar caso de testes com as respectivas tags
+robot -d .\test\ --include "Register Juridical Person" .\register-test.robot
+
+
+
+
+# procurar locator baseado em um texto
+//a[text()='Minha conta']
+
+# Criam ambiente .venv
+
+python -m venv .venv  
+.venv\Scripts\activate   
+
+#deixar o linux sem sehna
+-> apagar senha do usuário: sudo passwd -d <nome_do_usuario>
+-> para definir uma senha:  sudo passwd <nome_do_usuario>
+
