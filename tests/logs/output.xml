@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-03T15:03:26.537198" rpa="false" schemaversion="5">
+<suite id="s1" name="Register-Test" source="C:\LivroRobotFramework\tests\register-test.robot">
+<test id="s1-t1" name="Scenario: Sucess sign in as Natural Person" line="17">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-08-03T15:03:26.968217" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5173'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-03T15:03:26.967970" elapsed="3.801089"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-03T15:03:30.769609" elapsed="0.044901"/>
+</kw>
+<kw name="Given Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:30.818979" level="INFO">Clicking link '//a[text()='Minha conta']'.</msg>
+<arg>${MY_ACCOUNT_BUTTON}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:30.815888" elapsed="0.146330"/>
+</kw>
+<kw name="When Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:30.963310" level="INFO">Typing text 'Lorem ipsum' into text field 'id: register-name'.</msg>
+<arg>${NAME_TEXT_FIELD}</arg>
+<arg>Lorem ipsum</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:30.962742" elapsed="0.201081"/>
+</kw>
+<kw name="And Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.164711" level="INFO">Typing text 'lorem@ipsum.com' into text field 'id: register-mail'.</msg>
+<arg>${EMAIL_TEXT_FIELD}</arg>
+<arg>lorem@ipsum.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.164307" elapsed="0.086434"/>
+</kw>
+<kw name="And Input Password" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.251501" level="INFO">Typing password into text field 'id: register-pass'.</msg>
+<msg time="2025-08-03T15:03:31.277469" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASS_TEXT_FIELD}</arg>
+<arg>foo123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.251162" elapsed="0.069538"/>
+</kw>
+<kw name="And Input Password" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.321283" level="INFO">Typing password into text field 'id: register-confirm-pass'.</msg>
+<msg time="2025-08-03T15:03:31.350239" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${CONFIRM_PASS_TEXT_FIELD}</arg>
+<arg>foo123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.321082" elapsed="0.070687"/>
+</kw>
+<kw name="And Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.392378" level="INFO">Selecting options from selection list 'id: register-user-type' by label Pessoa Física.</msg>
+<arg>${BUSINESS_ENTITY_COMBOBOX}</arg>
+<arg>Pessoa Física</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.392137" elapsed="0.060992"/>
+</kw>
+<kw name="And Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.453694" level="INFO">Selecting checkbox 'id: terms-of-use'.</msg>
+<arg>${TERMS_OF_USE_CHECKBOX}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.453491" elapsed="0.105133"/>
+</kw>
+<kw name="And Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.559472" level="INFO">Clicking element '//input[@id="submit-register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.559260" elapsed="0.070846"/>
+</kw>
+<kw name="Then Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Lorem ipsum, teu cadastro foi realizado com sucesso!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.630550" elapsed="0.239698"/>
+</kw>
+<kw name="And Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.896638" level="INFO">Current page contains link '/my-orders'.</msg>
+<arg>${MY_ORDERS_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.870822" elapsed="0.025985"/>
+</kw>
+<kw name="And Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2025-08-03T15:03:31.915397" level="INFO">Current page contains link '/my-wish-list'.</msg>
+<arg>${MY_WYSH_LIST_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.897318" elapsed="0.018235"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-03T15:03:31.916140" elapsed="2.302134"/>
+</kw>
+<tag>Register Natural Person</tag>
+<status status="PASS" start="2025-08-03T15:03:26.966852" elapsed="7.251935"/>
+</test>
+<doc>Como cliente  da loja virtual, desejo criar um cadastro
+no sistema para poder visualiozar meus pedidos e listas de desejo.</doc>
+<status status="PASS" start="2025-08-03T15:03:26.539513" elapsed="7.680963"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Register Natural Person</stat>
+</tag>
+<suite>
+<stat name="Register-Test" id="s1" pass="1" fail="0" skip="0">Register-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

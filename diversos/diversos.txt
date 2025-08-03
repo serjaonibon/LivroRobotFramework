@@ -19,6 +19,8 @@ robot -d .\test\ --include "Register Juridical Person" .\register-test.robot
 python -m venv .venv  
 .venv\Scripts\activate   
 
+meu usuário lunux:-> sergionjunior
+
 #deixar o linux sem sehna
 -> apagar senha do usuário: sudo passwd -d <nome_do_usuario>
 -> para definir uma senha:  sudo passwd <nome_do_usuario>

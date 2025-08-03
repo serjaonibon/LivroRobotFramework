@@ -9,16 +9,16 @@ Resource          ../resource/page_objects/register_page_object.resource
 Resource          ../resource/page_objects/menu_page_object.resource
 
 
-# Test Setup        Open Browser    ${URL}    ${BROWSER}
+Test Setup        Open Browser    ${URL}    ${BROWSER}
 Test Teardown     Close Browser
 
 *** Test Cases ***
 
 Scenario: Sucess sign in as Natural Person
     [Tags]    Register Natural Person
-    Given Open Browser                ${URL}      ${BROWSER}   
-    And Maximize Browser Window
-    And Click Link                    ${MY_ACCOUNT_BUTTON}
+    # Given Open Browser                ${URL}      ${BROWSER}   
+    Maximize Browser Window
+    Given Click Link                  ${MY_ACCOUNT_BUTTON}
     When Input Text                   ${NAME_TEXT_FIELD}                Lorem ipsum
     And Input Text                    ${EMAIL_TEXT_FIELD}               lorem@ipsum.com
     And Input Password                ${PASS_TEXT_FIELD}                foo123
@@ -31,9 +31,9 @@ Scenario: Sucess sign in as Natural Person
     And Page Should Contain Link      ${MY_WYSH_LIST_LINK}
 
 Scenario: Sucess sign in as Juridical Person
-    Given Open Browser               ${URL}      ${BROWSER}  
-    And Maximize Browser Window
-    And Click Link                    ${MY_ACCOUNT_BUTTON}
+    # Given Open Browser               ${URL}      ${BROWSER}  
+    Maximize Browser Window
+    Given Click Link                    ${MY_ACCOUNT_BUTTON}
     When Input Text                   ${NAME_TEXT_FIELD}                Lorem ipsum
     And Input Text                    ${EMAIL_TEXT_FIELD}               contato@loremipsum.com
     And Input Password                ${PASS_TEXT_FIELD}                54321
